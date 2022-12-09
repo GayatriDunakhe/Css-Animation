@@ -29,18 +29,21 @@
 		const now = new Date();
 
 		var h = now.getHours();
-
-// 		var h = 5;
-		
+    
+		var h = 23;
 
 		var dy = now.getDay();
 		var mnth = now.getMonth();
 		var yr = now.getFullYear();
 		var date = now.getDate();
 
+		var user_name = document.getElementById('name');
+		var sys_date = document.getElementById('date');
+
 		var msg = document.getElementById('msg');
-		document.getElementById('name').innerHTML = "<h3> Hello " + name + "</h3>";
-		document.getElementById('date').innerHTML = days[dy] + " " + date + " " + months[mnth] + " " + yr;
+
+		user_name.innerHTML = "<h3> Hello " + name + "</h3>";
+		sys_date.innerHTML = days[dy] + " " + date + " " + months[mnth] + " " + yr;
 
 		var img = document.getElementById('img');
 		var img_size = 300;
@@ -59,17 +62,22 @@
 			msg.innerHTML = "<h1> Good Afternoon!! </h1> <br> Have a helthy lunch... ";
 		}
 		else if(h >= 17 && h < 22){ //eveing
-			document.body.style.backgroundImage = "linear-gradient(#748DA6, #9CB4CC, #D3CEDF, #F2D7D9, #D3CEDF)";
+			document.body.style.backgroundImage = "linear-gradient(#748DA6, #9CB4CC, #D3CEDF, #F2D7D9)";
 			img.src = "greeting/eveing.svg";
 			img.hight = img_size;
 			img.width = img_size;
 			msg.innerHTML = "<h1> Good Evening!! </h1> <br> Feel Free form work... ";
 		}
 		else if(h >= 22 && h < 24){ //night
+			document.body.style.backgroundImage = "linear-gradient(#1F1D36, #3F3351, #864879, #E9A6A6)";
+
+			user_name.style.color = "#fff";
+			sys_date.style.color = "#fff";
+
 			img.src = "greeting/night.svg";
 			img.hight = img_size;
 			img.width = img_size;
-			msg.innerHTML = "<h1> Good Night!! </h1> <br> Rest, Realx, Calm... ";
+			msg.innerHTML = "<h1 style='color:white'> Good Night!! </h1> <br> <p style='color:white'>Rest, Realx, Calm... </p>";
 		}
 		else{ //broken
 			img.src="greeting/confuse.svg";
