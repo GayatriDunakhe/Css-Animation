@@ -10,6 +10,7 @@
 	<center>
 	<div id="name"></div>
 	<div id="date"></div>
+	<br>
 	<div>
 		<img src="" id="img">
 	</div>
@@ -28,9 +29,9 @@
 
 		const now = new Date();
 
-		var h = now.getHours();
-    
-		var h = 23;
+		// var h = now.getHours();
+
+		var h = 12;
 
 		var dy = now.getDay();
 		var mnth = now.getMonth();
@@ -56,17 +57,23 @@
 			msg.innerHTML = "<h1> Good Morning!! </h1> <br> Have a nice day... ";
 		}
 		else if(h >= 12 && h < 17){ //afternoon
+			document.body.style.backgroundImage = "linear-gradient(#876445, #CA965C, #EEC373, #F4DFBA)";
+
 			img.src = "greeting/afternoon.svg";
 			img.hight = img_size;
 			img.width = img_size;
 			msg.innerHTML = "<h1> Good Afternoon!! </h1> <br> Have a helthy lunch... ";
 		}
 		else if(h >= 17 && h < 22){ //eveing
-			document.body.style.backgroundImage = "linear-gradient(#748DA6, #9CB4CC, #D3CEDF, #F2D7D9)";
+			document.body.style.backgroundImage = "linear-gradient(#F39189, #BB8082, #6E7582, #046582)";
+
+			user_name.style.color = "#fff";
+			sys_date.style.color = "#fff";
+      
 			img.src = "greeting/eveing.svg";
 			img.hight = img_size;
 			img.width = img_size;
-			msg.innerHTML = "<h1> Good Evening!! </h1> <br> Feel Free form work... ";
+			msg.innerHTML = "<h1 style='color:white'> Good Evening!! </h1> <br> <p style='color:white'> Feel Free form work... </p>";
 		}
 		else if(h >= 22 && h < 24){ //night
 			document.body.style.backgroundImage = "linear-gradient(#1F1D36, #3F3351, #864879, #E9A6A6)";
@@ -77,9 +84,12 @@
 			img.src = "greeting/night.svg";
 			img.hight = img_size;
 			img.width = img_size;
-			msg.innerHTML = "<h1 style='color:white'> Good Night!! </h1> <br> <p style='color:white'>Rest, Realx, Calm... </p>";
+      
+			msg.innerHTML = "<h1 style='color:white'> Good Night!! </h1> <br> <p style='color:white'> Rest, Realx, Calm... </p>";
 		}
 		else{ //broken
+			document.body.style.backgroundImage = "linear-gradient(#FFDDD2, #FFB9B9, #FFACC7, #FF8DC7)";
+
 			img.src="greeting/confuse.svg";
 			img.hight = img_size;
 			img.width = img_size;
