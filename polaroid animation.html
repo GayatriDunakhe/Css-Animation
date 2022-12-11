@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Polaroid Animation</title>
+
+	<style type="text/css">
+		
+		$bg: #b5e8fb;
+		$gray: #34495e;
+		$dark-gray: #212f3d;
+
+		html, body{
+			height: 100%;
+			width: 100%;
+			padding: 0;
+			margin: 0;
+			overflow: hidden;
+		}
+
+		html{
+			box-sizing: border-box;
+		}
+
+		*, *:before, *:after{
+			box-sizing: inherit;
+		}
+
+		*{
+			position: absolute;
+		}
+
+		*:before, *:after{
+			contain: "";
+			position: absolute;
+		}
+
+		body{
+			background: #b5e8fb; //$bg
+		}
+
+		.polaroid{
+			width: 420px;
+			height: 280px;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		.polaroid-body{
+			width: 100%;
+			height: 100%;
+			border-radius: 40px;
+			background-color: #fff;
+			box-shadow: 10px 10px darken(#b5e8fb, 5%); //$bg
+		}
+
+	</style>
+
+</head>
+<body>
+
+<div class="polaroid">
+	<div class="button"></div>
+	<div class="flash"></div>
+	<div class="polaroid-body"></div>
+	<div class="blinker"></div>
+	<div class="zoom"></div>
+	<div class="stripes"></div>
+</div>
+
+</body>
+</html>
