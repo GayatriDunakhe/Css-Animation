@@ -55,7 +55,71 @@
 			background-color: #fff;
 			box-shadow: 10px 10px darken(#b5e8fb, 5%); //$bg
 		}
+		
+		.button { 
+		  width: 10%; 
+		  height: 5%; 
+		  top: -2%; 
+		  left: 14%; 
+		  background-color: #cb214a; 
+		  border-radius: 16px; 
+		}
 
+		.flash { 
+		   width: 24%; 
+		   height: 15%;
+		   top: -12%; 
+		   left: 38%; 
+		   background-color: #34495e; /*$grey*/
+		   border-radius: 8px; 
+		}
+
+		.flash::after{ 
+		     width: 36%; 
+		     height: 60%; 
+		     background-color: lighten(#34495e, 30%); /*$grey*/
+		     border-radius: 5px; 
+		     top: 10%; 
+		     left: 32%; 
+		} 
+
+		.blinker{
+			width: 15px;
+			height: 15px;
+			border-radius: 15px;
+			background-color: #212f3d; /*$dark-grey*/
+			top: 15%;
+			left: 15%;
+		}
+
+		.zoom{
+			width: 50%;
+			height: 75%;
+			left: 25%;
+			top: 12.5%;
+			background: #212f3d; /*$grey*/
+			border-radius: 50%;
+			box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
+			overflow: hidden;
+		}
+		.zoom::before{
+			width: 80%;
+			height: 80%;
+			top: 10%;
+			left: 10%;
+			border-radius: 50%;
+			background: #2c3e50;
+			border: 10px solid #34495e; /*$grey*/
+		}
+
+		.zoom::after{
+			width: 40%;
+			height: 40%;
+			top: 30%;
+			left: 30%;
+			border-radius: 50%;
+			background: #212f3d; /*$dark-grey*/
+		}
 	</style>
 
 </head>
