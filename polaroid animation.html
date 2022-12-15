@@ -56,6 +56,33 @@
 			box-shadow: 10px 10px darken(#b5e8fb, 5%); //$bg
 		}
 
+		.flash { 
+		   width: 24%; 
+		   height: 15%;
+		   top: -12%; 
+		   left: 38%; 
+		   background-color: #34495e; //$grey
+		   border-radius: 8px; 
+		   &:after { 
+		     width: 36%; 
+		     height: 60%; 
+		     background-color: darken(#34495e, 30%);
+		     border-radius: 5px; 
+		     top: 10%; 
+		     left: 32%; 
+		   } 
+		}
+
+		.blinker{
+			width: 15px;
+			height: 15px;
+			border-radius: 15px;
+			background-color: #212f3d;
+			top: 15%;
+			left: 15%;
+		}
+
+
 	</style>
 
 </head>
