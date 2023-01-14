@@ -63,6 +63,8 @@
 		  left: 14%; 
 		  background-color: #cb214a; 
 		  border-radius: 16px; 
+		  animation: button 5s linear infinite; 
+		  transform: translateY(-5px);
 		}
 
 		.flash { 
@@ -101,6 +103,7 @@
 			border-radius: 50%;
 			box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
 			overflow: hidden;
+			animation: zoom 5s linear infinite;
 		}
 		.zoom::before{
 			width: 80%;
@@ -153,7 +156,37 @@
 						0px 28px rgb(221, 229, 107),
 						0px 35px rgb(62, 162, 48),
 						0px 42px rgb(1, 136, 194);
-    
+		}
+		
+    		.flashlight{
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background: rgba(white, 0.7);
+			transition: all ease 0.2s;
+			opacity: 0;
+		}
+
+		@keyframes button{
+			5%, 15%{
+				transform: translateY(0);
+			}
+			10%{
+				transform: translateY(10px);
+			}
+		}
+
+		@keyframes zoom{
+			20%, 32%{
+				transform: rotate(0deg);
+			}
+			26%{
+				transform: rotate(20deg);
+			}
+		}
+	
 	</style>
 
 </head>
@@ -164,10 +197,11 @@
 	<div class="flash"></div>
 	<div class="polaroid-body"></div>
 	<div class="blinker"></div>
+	<div class="stripes"></div>
 	<div class="zoom">
 		<div class="reflections"></div>
 	</div>
-	<div class="stripes"></div>
+	<div class="flashlight"></div>
 </div>
 
 </body>
