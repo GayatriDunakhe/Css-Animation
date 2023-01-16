@@ -53,7 +53,7 @@
 			height: 100%;
 			border-radius: 40px;
 			background-color: #fff;
-			box-shadow: 10px 10px darken(#b5e8fb, 5%); //$bg
+			box-shadow: 10px 10px darken(#b5e8fb, 5%); /*$bg*/
 		}
 		
 		.button { 
@@ -63,8 +63,8 @@
 		  left: 14%; 
 		  background-color: #cb214a; 
 		  border-radius: 16px; 
-		  animation: button 5s linear infinite; 
 		  transform: translateY(-5px);
+		  animation: button 5s linear infinite;	
 		}
 
 		.flash { 
@@ -158,16 +158,16 @@
 						0px 42px rgb(1, 136, 194);
 		}
 		
-    		.flashlight{
-			position: fixed;
-			width: 100%;
-			height: 100%;
-			top: 0;
-			left: 0;
-			background: rgba(white, 0.7);
-			transition: all ease 0.2s;
-			opacity: 0;
-		}
+    .flashlight{
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(white, 0.7);
+      transition: all ease 0.2s;
+      opacity: 0;
+    }
 
 		@keyframes button{
 			5%, 15%{
