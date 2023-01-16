@@ -63,6 +63,7 @@
 		  left: 14%; 
 		  background-color: #cb214a; 
 		  border-radius: 16px; 
+		  animation: button 5s linear infinite;	
 		}
 
 		.flash { 
@@ -154,6 +155,31 @@
 						0px 35px rgb(62, 162, 48),
 						0px 42px rgb(1, 136, 194);
     
+		.flashlight{
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background: rgba(white, 0.7);
+			transition: all ease 0.2s;
+			opacity: 0;
+		}
+			
+		@keyframes button{
+			0%{
+				transform: translateY(0);
+			}
+
+			50%{
+				transform: translateY(10px);
+			}
+
+			100%{
+				transform: translateY(0);
+			}
+		}
+	
 	</style>
 
 </head>
@@ -164,10 +190,11 @@
 	<div class="flash"></div>
 	<div class="polaroid-body"></div>
 	<div class="blinker"></div>
+	<div class="stripes"></div>
 	<div class="zoom">
 		<div class="reflections"></div>
 	</div>
-	<div class="stripes"></div>
+	<div class="flashlight"></div>
 </div>
 
 </body>
