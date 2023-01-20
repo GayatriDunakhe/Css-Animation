@@ -1,0 +1,48 @@
+$x-dark: #29284c;
+$dark: #4c4b82;
+$medium: #717ae1;
+$light: #b9bef6;
+$x-light: #d6d9f6;
+$aqua: #75e2fa;
+$gray: #9e9ebe;
+$yellow: #f7f2b4;
+
+html, body{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    box-sizing: border-box;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+*{
+    position: absolute;
+}
+
+*::after, *::before{
+    content: "";
+    position: absolute;
+}
+
+.scene{
+    width: 100vw;
+    height: 100vh;
+}
+
+.background{
+    background: $x-dark;
+    background-image: linear-gradient(
+        $x-dark 0%,
+        $dark 10%,
+        $medium 60%,
+        $aqua 90%
+    );
+}
