@@ -66,3 +66,43 @@ html{
     left: 0;
     z-index: 2;
 }
+
+.stars{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    .star{
+        border-radius: 50%;
+        background-color: $light;
+        animation: twinkle 5s ease-in-out infinite;
+    }
+}
+
+@for $i from 1 through (60){
+    $size: random(4) + px;
+    .star:nth-child(#{$i}){
+        top: random(100) + vh;
+        left: random(100) + vw;
+        width: $size;
+        height: $size;
+        animation-delay: random(5) + s;
+    }
+}
+
+.moon{
+    width: 80px;
+    height: 80px;
+    top: 25%;
+    right: 10%;
+    border-radius: 50%;
+    z-index: 2;
+    background-color: $x-light;
+    box-shadow: 0 0 10px $x-light, 
+                0 0 20px $x-light, 
+                0 0 30px $x-light,
+                0 0 40px $x-light,
+                0 0 50px $x-light,
+                0 0 100px $x-light;
+}
