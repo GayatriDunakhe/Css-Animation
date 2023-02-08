@@ -67,7 +67,6 @@ html{
     z-index: 2;
 }
 
-
 .mountains{
     width: 100%;
     height: 250px;
@@ -119,5 +118,26 @@ html{
                 $medium 6%, 
                 $aqua 20%);
         }
+        
+.stars{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    .star{
+        border-radius: 50%;
+        background-color: $light;
+        animation: twinkle 5s ease-in-out infinite;
+    }
+}
+
+@for $i from 1 through(60){
+    .star:nth-child(#{$i}){
+        top: random(100)+vh;
+        left: random(100)+vw;
+        width: random(4)+px;
+        height: random(4)+px;
+        animation-delay: random(5)+s;
     }
 }
