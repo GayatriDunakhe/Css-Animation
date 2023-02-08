@@ -67,7 +67,6 @@ html{
     z-index: 2;
 }
 
-
 .wave{
     background-color: $x-light;
     height: 3px;
@@ -86,3 +85,78 @@ html{
         animation-delay: random(3) + s;
     }
 }  
+
+.mountains{
+    width: 100%;
+    height: 250px;
+    bottom: 65px;
+    z-index: 3;
+    .mountain{
+        width: 250px;
+        height: 250px;
+        background-color: $medium;
+        right: 50px;
+        bottom: -40px;
+        transform: rotate(45deg);
+        border-radius: 3px;
+        &::after{
+            width: 100%;
+            height: 100%;
+            opacity: 0.7;
+            background-image: linear-gradient(
+                135deg, 
+                $dark 0%, 
+                $medium 20%, 
+                $aqua 40%);
+        }
+    }
+    
+    .mountain:nth-child(2){
+        right: 220px;
+        width: 240px;
+        height: 240px;
+        z-index: 2;
+    }
+
+    .mountain:nth-child(3){
+        right: 350px;
+        width: 260px;
+        height: 260px;
+    }
+
+    .mountain:nth-child(4){
+        right: 130px;
+        width: 200px;
+        height: 200px;
+        z-index: 3;
+        bottom: -70px;
+        &::after{
+            background-image: linear-gradient(
+                135deg, 
+                $dark 0%, 
+                $medium 6%, 
+                $aqua 20%);
+        }
+        
+.stars{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    .star{
+        border-radius: 50%;
+        background-color: $light;
+        animation: twinkle 5s ease-in-out infinite;
+    }
+}
+
+@for $i from 1 through(60){
+    .star:nth-child(#{$i}){
+        top: random(100)+vh;
+        left: random(100)+vw;
+        width: random(4)+px;
+        height: random(4)+px;
+        animation-delay: random(5)+s;
+    }
+}
