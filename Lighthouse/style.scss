@@ -234,5 +234,25 @@ html{
     }
 }
 
+.lighthouse-ground{
+    width: 50%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.land{
+    width: 400px;
+    height: 60px;
+    left: -30px;
+    bottom: 0;
+    background-image: linear-gradient(to top, $x-dark 80%, $medium 100%);
+    transform: skewX(35deg);
+    border-radius: 10px;
+}
+
+
+
         
 
