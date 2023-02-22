@@ -234,5 +234,38 @@ html{
     }
 }
 
+.lighthouse-holder{
+    height: 480px;
+    width: 100px;
+    bottom: 80px;
+    left: 100px;
+}
+
+.lighthouse{
+    height: 100%;
+    width: 100%;
+    transform: perspective(600px) rotateX(20deg);
+    background-color: $x-light;
+    background-image: repeating-linear-gradient(
+        -40deg,
+        transparent,
+        transparent 60px,
+        $dark 60px,
+        $dark 120px
+    );
+
+    &::after{
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        background-image: linear-gradient(
+            90deg,
+            transparentize($x-light, 0.4) 0%,
+            $x-dark 8%,
+            transparent 70%,
+            transparentize($x-light, 0.6) 100%
+        );
+    }
+}
         
 
