@@ -253,7 +253,34 @@ html{
     border-radius: 10px;
 }
 
+.shadow{
+    width: 117px;
+    height: 50px;
+    left: -32px;
+    bottom: -70px;
+    background: $x-dark;
+    transform: skewX(-45deg);
+}
 
+.windows{
+    height: 100%;
+    width: 100%;
+    .window{
+        background-color: $x-dark;
+        height: 25px;
+        width: 15px;
+        left: 43px;
+        border-bottom: 2px solid rgba($light, 0.7);
+        border-radius: 25px 25px 0 0;
+    }
+    $bottom: 90px;
 
+    @for $x from 1 through(4){
+        .window:nth-of-type(#{$x}){
+            bottom: $bottom;
+        }
+        $bottom: $bottom + 90px;
+    }
+}
         
 
