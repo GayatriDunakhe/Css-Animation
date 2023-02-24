@@ -229,7 +229,7 @@ html{
         height: 70px;
         left: 15px;
         bottom: 10px;
-//         transform: scaleX(-1);
+        transform: scaleX(-1);
         clip-path: polygon(50% 0%, 0% 100%, 50% 100%);
         background: linear-gradient($light 0%, $dark 60%);
     }
@@ -253,7 +253,54 @@ html{
     border-radius: 10px;
 }
 
+.door{
+    background-color: $x-dark;
+    height: 40px;
+    width: 25px;
+    left: 38px;
+    bottom: -2px;
+    border-radius: 2px 2px 0 0;
 
+    .stairs{
+        width: 27px;
+        height: 28px;
+        background-color: $x-dark;
+        top: 34px;
+        left: -1px;
+        transform: perspective(100px) rotateX(45deg);
+        background-image: repeating-linear-gradient(
+            to bottom,
+            $x-dark,
+            $x-dark 4px,
+            $light 4px,
+            rgba(white, 0.1) 5px
+        );
+    }
+}
+
+.top{
+    width: 94px;
+    height: 60px;
+    left: 3px;
+    top: -15px;
+
+    .rail{
+        width: 100%;
+        height: 17px;
+        bottom: 1px;
+        border: 3px solid $x-dark;
+        border-radius: 1px;
+        transform: perspective(1000px) rotateX(-35deg);
+        background-image: repeating-linear-gradient(
+            90deg,
+            $x-dark,
+            $x-dark 3px,
+            $gray 3px,
+            $yellow 10px
+        );
+        background-position: -2px 0;
+    }
+}
 
         
 
