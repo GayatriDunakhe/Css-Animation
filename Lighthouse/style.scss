@@ -7,6 +7,9 @@ $aqua: #75e2fa;
 $gray: #9e9ebe;
 $yellow: #f7f2b4;
 
+$boatSpeed: 100s;
+$lightSpeed: 40s;
+
 html, body{
     height: 100%;
     width: 100%;
@@ -184,6 +187,7 @@ html{
     height: 90px;
     bottom: 90px;
     right:10%;
+    animation: boat $boatSpeed linear infinite;
 
     &::after{
         height: 8px;
@@ -194,7 +198,8 @@ html{
         border-radius: 40%;
         top: 105px;
         left: 20px;
-        z-index: -1;    
+        z-index: -1;
+        animation: boatShadow $boatSpeed linear infinite;
     }
 
     &::before{
@@ -445,6 +450,9 @@ html{
     transform-style: preserve-3d;
     transform-origin: left bottom;
     transform: perspective(500px) rotateY(0deg);
+    
+    animation: lightRotate $lightSpeed linear infinite;
+    
     .light{
         width: 100%;
         height: 100%;
@@ -476,6 +484,8 @@ html{
     0 0 60px, $yellow, 
     0 0 70px $yellow,
     0 0 80px $yellow;
+    
+    animation: lightGlow $lightSpeed linear infinite;
 }
 
 
@@ -518,5 +528,35 @@ html{
     50%,
     100%{
         transform: skewX(-55deg) translateX(-40px);
+    }
+}
+
+@keyframes lightRotate{
+    0%,
+
+    100%{
+        // initial and final state
+        transform: perspective(500px) rotateY(0deg);
+    }
+
+    25%{
+        // rotate it back
+        transform: perspective(500px) rotateY(35deg);
+    }
+
+    75%{
+        // rotate it front
+        transform: perspective(500px) rotateY(-35deg);
+    }
+
+}
+
+@keyframes lightGlow{
+    0%, 50%, 100%{
+        opacity: 0;
+    }
+
+    75%{
+        opacity: 1;
     }
 }
